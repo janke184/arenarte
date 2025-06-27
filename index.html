@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arenarte - Kits de Arte con Arena para Niños</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Estilos personalizados y configuración de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                        'display': ['Fredoka', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-pink': '#f72585',
+                        'brand-purple': '#7209b7',
+                        'brand-blue': '#3a0ca3',
+                        'brand-cyan': '#4cc9f0',
+                        'brand-light-blue': '#4895ef',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilo para un desplazamiento suave */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <!-- ========== HEADER ========== -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold font-display text-brand-purple">
+                Arenarte
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#nosotros" class="text-gray-600 hover:text-brand-pink transition duration-300">Nosotros</a>
+                <a href="#kits" class="text-gray-600 hover:text-brand-pink transition duration-300">Nuestros Kits</a>
+                <a href="#contacto" class="text-gray-600 hover:text-brand-pink transition duration-300">Contacto</a>
+            </nav>
+            <a href="#kits" class="hidden md:block bg-brand-pink hover:bg-fuchsia-600 text-white font-bold py-2 px-6 rounded-full transition duration-300 shadow-lg">
+                ¡Comprar ahora!
+            </a>
+            <!-- Menú móvil (opcional, para futuras mejoras) -->
+            <button class="md:hidden text-brand-purple">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========== BANNER / HERO SECTION ========== -->
+        <section class="relative h-[60vh] md:h-[80vh] bg-gradient-to-tr from-brand-light-blue to-brand-cyan flex items-center justify-center text-white overflow-hidden">
+            <div class="absolute inset-0 bg-black/20"></div>
+            <!-- Formas decorativas -->
+            <div class="absolute -bottom-1/4 -left-20 w-80 h-80 bg-brand-pink/50 rounded-full filter blur-3xl opacity-60 animate-pulse"></div>
+            <div class="absolute -top-1/4 -right-20 w-96 h-96 bg-brand-purple/50 rounded-full filter blur-3xl opacity-60 animate-pulse animation-delay-4000"></div>
+            
+            <div class="relative z-10 text-center px-6">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold font-display leading-tight mb-4">
+                    Crea, Juega y Sueña con Arena de Colores
+                </h1>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8">
+                    Descubre un mundo de creatividad sin límites. Nuestros kits transforman el juego en obras de arte únicas.
+                </p>
+                <a href="#kits" class="bg-white text-brand-purple font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-200 transition duration-300 transform hover:scale-105 shadow-2xl">
+                    Ver Kits
+                </a>
+            </div>
+        </section>
+
+        <!-- ========== TEXTO + IMAGEN (Nosotros) ========== -->
+        <section id="nosotros" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                    <div class="text-center md:text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold font-display text-brand-blue mb-6">¿Cómo funciona Arenarte?</h2>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            ¡Es tan fácil como mágico! Cada kit de Arenarte viene con láminas de dibujo precortadas y adhesivas, y un arcoíris de arenas de colores. Simplemente elige una sección del dibujo, despega el papel protector para revelar la superficie pegajosa y vierte la arena del color que más te guste.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            La arena se adherirá creando diseños vibrantes y con textura. Es una actividad perfecta para desarrollar la motricidad fina, la concentración y, sobre todo, ¡para pasar horas de diversión creativa!
+                        </p>
+                        <a href="#kits" class="mt-8 inline-block bg-brand-light-blue hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg">
+                            Quiero mi Kit
+                        </a>
+                    </div>
+                    <div class="w-full h-80 md:h-96 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                        <img src="https://placehold.co/600x400/f72585/white?text=Ni%C3%B1o+jugando+con+kit+Arenarte" 
+                             alt="Niño creando con un kit de Arenarte" 
+                             class="w-full h-full object-cover"
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Imagen+no+disponible';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== IMAGEN ANCHA (Galería) ========== -->
+        <section class="h-64 md:h-96 bg-gray-200">
+            <img src="https://placehold.co/1920x600/4cc9f0/ffffff?text=Creaciones+con+Arenarte" 
+                 alt="Collage de obras de arte hechas con Arenarte" 
+                 class="w-full h-full object-cover"
+                 onerror="this.onerror=null;this.src='https://placehold.co/1920x600/cccccc/ffffff?text=Imagen+no+disponible';">
+        </section>
+
+        <!-- ========== PLANES / KITS ========== -->
+        <section id="kits" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold font-display text-brand-blue mb-4">Nuestros Kits Six-Pack</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Cada kit incluye 6 tarjetas temáticas para llenar de color. ¡Elige tu aventura!</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                    <!-- Kit 1: Dinosaurios -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 text-center transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                        <img src="https://placehold.co/300x200/4895ef/white?text=Dinosaurios" alt="Kit de Dinosaurios" class="w-full h-48 object-cover rounded-lg mb-6" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/ffffff?text=Imagen';">
+                        <h3 class="text-2xl font-bold font-display text-brand-purple mb-2">Six-Pack: Dinosaurios</h3>
+                        <p class="text-gray-500 mb-4 flex-grow">Viaja a la prehistoria y da vida a los gigantes del pasado.</p>
+                        <p class="text-4xl font-bold text-brand-blue mb-6">$30.000</p>
+                        <button class="w-full bg-brand-pink hover:bg-fuchsia-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 mt-auto">
+                            Añadir al Carrito
+                        </button>
+                    </div>
+                    <!-- Kit 2: Medios de Transporte -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 text-center transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                        <img src="https://placehold.co/300x200/3a0ca3/white?text=Transporte" alt="Kit de Medios de Transporte" class="w-full h-48 object-cover rounded-lg mb-6" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/ffffff?text=Imagen';">
+                        <h3 class="text-2xl font-bold font-display text-brand-purple mb-2">Six-Pack: Transporte</h3>
+                        <p class="text-gray-500 mb-4 flex-grow">Autos, aviones y barcos listos para que les des color y velocidad.</p>
+                        <p class="text-4xl font-bold text-brand-blue mb-6">$30.000</p>
+                        <button class="w-full bg-brand-pink hover:bg-fuchsia-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 mt-auto">
+                            Añadir al Carrito
+                        </button>
+                    </div>
+                    <!-- Kit 3: Animales Terrestres -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 text-center transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                        <img src="https://placehold.co/300x200/7209b7/white?text=Animales+Terrestres" alt="Kit de Animales Terrestres" class="w-full h-48 object-cover rounded-lg mb-6" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/ffffff?text=Imagen';">
+                        <h3 class="text-2xl font-bold font-display text-brand-purple mb-2">Six-Pack: Animales Terrestres</h3>
+                        <p class="text-gray-500 mb-4 flex-grow">Explora la selva y la granja con tus animales favoritos.</p>
+                        <p class="text-4xl font-bold text-brand-blue mb-6">$30.000</p>
+                        <button class="w-full bg-brand-pink hover:bg-fuchsia-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 mt-auto">
+                            Añadir al Carrito
+                        </button>
+                    </div>
+                    <!-- Kit 4: Animales de Mar -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 text-center transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                        <img src="https://placehold.co/300x200/4cc9f0/white?text=Animales+de+Mar" alt="Kit de Animales de Mar" class="w-full h-48 object-cover rounded-lg mb-6" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/ffffff?text=Imagen';">
+                        <h3 class="text-2xl font-bold font-display text-brand-purple mb-2">Six-Pack: Animales de Mar</h3>
+                        <p class="text-gray-500 mb-4 flex-grow">Sumérgete en un océano de color con peces, pulpos y tortugas.</p>
+                        <p class="text-4xl font-bold text-brand-blue mb-6">$30.000</p>
+                        <button class="w-full bg-brand-pink hover:bg-fuchsia-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 mt-auto">
+                            Añadir al Carrito
+                        </button>
+                    </div>
+                    <!-- Kit 5: Fashion -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 text-center transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                        <img src="https://placehold.co/300x200/f72585/white?text=Fashion" alt="Kit de Fashion" class="w-full h-48 object-cover rounded-lg mb-6" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/ffffff?text=Imagen';">
+                        <h3 class="text-2xl font-bold font-display text-brand-purple mb-2">Six-Pack: Fashion</h3>
+                        <p class="text-gray-500 mb-4 flex-grow">Diseña vestidos, zapatos y accesorios con tu propio estilo.</p>
+                        <p class="text-4xl font-bold text-brand-blue mb-6">$30.000</p>
+                        <button class="w-full bg-brand-pink hover:bg-fuchsia-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 mt-auto">
+                            Añadir al Carrito
+                        </button>
+                    </div>
+                    <!-- Kit 6: Hadas y Mariposas -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 text-center transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                        <img src="https://placehold.co/300x200/f72585/white?text=Hadas+y+Mariposas" alt="Kit de Hadas y Mariposas" class="w-full h-48 object-cover rounded-lg mb-6" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/ffffff?text=Imagen';">
+                        <h3 class="text-2xl font-bold font-display text-brand-purple mb-2">Six-Pack: Hadas y Mariposas</h3>
+                        <p class="text-gray-500 mb-4 flex-grow">Entra en un mundo mágico lleno de criaturas encantadas y color.</p>
+                        <p class="text-4xl font-bold text-brand-blue mb-6">$30.000</p>
+                        <button class="w-full bg-brand-pink hover:bg-fuchsia-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 mt-auto">
+                            Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== PIE DE PÁGINA (Footer) ========== -->
+    <footer id="contacto" class="bg-brand-blue text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <!-- Sobre Arenarte -->
+                <div>
+                    <h4 class="text-xl font-bold font-display mb-4">Arenarte</h4>
+                    <p class="text-blue-200">Despertando la creatividad de los más pequeños con el poder del color y la arena.</p>
+                </div>
+                <!-- Enlaces -->
+                <div>
+                    <h4 class="text-xl font-bold font-display mb-4">Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#nosotros" class="text-blue-200 hover:text-white transition">Sobre Nosotros</a></li>
+                        <li><a href="#kits" class="text-blue-200 hover:text-white transition">Kits</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <!-- Redes Sociales -->
+                <div>
+                    <h4 class="text-xl font-bold font-display mb-4">Síguenos</h4>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#" class="text-blue-200 hover:text-white transition">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" class="text-blue-200 hover:text-white transition">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.664-4.919-4.919-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163zm0 1.441c-3.111 0-3.479.012-4.696.068-2.622.12-3.83 1.324-3.951 3.951-.056 1.217-.067 1.583-.067 4.696s.011 3.479.067 4.696c.12 2.622 1.33 3.83 3.951 3.951 1.217.056 1.585.067 4.696.067s3.479-.011 4.696-.067c2.622-.12 3.83-1.329 3.951-3.951.056-1.217.067-1.585.067-4.696s-.011-3.479-.067-4.696c-.12-2.622-1.329-3.83-3.951-3.951C15.479 3.614 15.111 3.604 12 3.604zM12 8.441c-1.953 0-3.559 1.606-3.559 3.559s1.606 3.559 3.559 3.559 3.559-1.606 3.559-3.559-1.606-3.559-3.559-3.559zm0 5.697c-1.18 0-2.138-.958-2.138-2.138s.958-2.138 2.138-2.138 2.138.958 2.138 2.138-.958 2.138-2.138 2.138zm4.652-6.114c-.586 0-1.061.475-1.061 1.061s.475 1.061 1.061 1.061 1.061-.475 1.061-1.061-.475-1.061-1.061-1.061z" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-blue-800 pt-6 text-center">
+                <p class="text-blue-200">&copy; 2024 Arenarte. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
